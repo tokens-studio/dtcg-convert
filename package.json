@@ -1,0 +1,66 @@
+{
+  "name": "@tokens-studio/dtcg-convert",
+  "version": "0.0.0",
+  "description": "Conversion tool that converts Style Dictionary JSON formatted file(s) to DTCG",
+  "license": "MIT",
+  "author": "Joren Broekema <joren.broekema@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokens-studio/dtcg-convert.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./define": "./dist/define.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "tsc",
+    "build-demo": "vite build --outDir dist-demo",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint \"**/*.js\" --fix",
+    "format:prettier": "prettier \"**/*.js\" \"package.json\" --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.js\"",
+    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "lint:types": "tsc --noEmit",
+    "prepare": "husky",
+    "version": "changeset version && npm i",
+    "release": "npm run build && changeset publish"
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.19.1",
+    "@zip.js/zip.js": "^2.7.54",
+    "lit": "^3.1.4",
+    "style-dictionary": "^4.3.0"
+  },
+  "keywords": [
+    "DTCG",
+    "Style Dictionary",
+    "JSON",
+    "convert",
+    "Design Token Community Group"
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "prettier-package-json": "^2.8.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}

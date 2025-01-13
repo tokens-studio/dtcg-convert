@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ESNext", "dom"],
+    "strict": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "types": ["node"],
+    "sourceMap": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "outDir": "dist"
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules", "**/coverage/*", "dist", "dist-demo"]
+}
