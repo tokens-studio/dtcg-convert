@@ -1,6 +1,5 @@
-import { LitElement, PropertyValues, css, html } from 'lit';
+import { LitElement, css, html } from 'lit';
 import { ref, createRef } from 'lit/directives/ref.js';
-import '@shoelace-style/shoelace/dist/components/button/button.js';
 import { convertJSONToDTCG, convertZIPToDTCG } from 'style-dictionary/utils';
 import { downloadJSON, downloadZIP } from './downloadFile.js';
 
@@ -66,6 +65,10 @@ export class DtcgConvert extends LitElement {
   }
 
   render() {
+    // render default shoelace button
+    if (this.childCount === 0) {
+      import('@shoelace-style/shoelace/dist/components/button/button.js');
+    }
     return html`
       <slot @slotchange=${this.onSlotChange}></slot>
       ${this.childCount === 0
