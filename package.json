@@ -1,6 +1,6 @@
 {
   "name": "@tokens-studio/dtcg-convert",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Conversion tool that converts Style Dictionary JSON formatted file(s) to DTCG",
   "license": "MIT",
   "author": "Joren Broekema <joren.broekema@gmail.com>",
