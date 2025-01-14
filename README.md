@@ -19,9 +19,7 @@ npm install @tokens-studio/dtcg-convert
 ## Usage
 
 ```js
-// import the Web Component class and define and/or extend it yourself
-import { DtcgConvert } from '@tokens-studio/dtcg-convert';
-// or optionally pre-register it and use <dtcg-convert>
+// registers <dtcg-convert>
 import '@tokens-studio/dtcg-convert/define';
 ```
 
